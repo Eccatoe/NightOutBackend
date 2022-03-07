@@ -10,6 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_07_173722) do
+ActiveRecord::Schema.define(version: 2022_03_07_200234) do
+
+  create_table "reservations", force: :cascade do |t|
+    t.datetime "details"
+    t.integer "restaurant_id"
+    t.integer "user_id"
+    t.integer "rideshare_id"
+    t.integer "num_guests"
+    t.index ["restaurant_id"], name: "index_reservations_on_restaurant_id"
+    t.index ["rideshare_id"], name: "index_reservations_on_rideshare_id"
+    t.index ["user_id"], name: "index_reservations_on_user_id"
+  end
+
+  create_table "restaurants", force: :cascade do |t|
+    t.string "restaurant_name"
+    t.string "address"
+    t.string "price"
+    t.integer "avg_turn_time"
+    t.string "cuisine"
+    t.string "description"
+  end
+
+  create_table "rideshares", force: :cascade do |t|
+    t.string "company"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.integer "cc_info"
+    t.string "address"
+  end
 
 end
