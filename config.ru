@@ -12,4 +12,8 @@ end
 use Rack::JSONBodyParser
 
 # Our application
+use ReservationsController
+use RestaurantsController
+use RidesharesController
+use UsersController
 run ApplicationController
