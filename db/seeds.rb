@@ -12,13 +12,6 @@ puts "🌱 Seeding spices..."
     )
 end
 
-
-
-
-# Faker::Date.between(from: 2.days.ago, to: Date.today) #=> #<Date: 2014-09-24>
-
-
-
 #Rideshares
 Rideshare.create(company: "Lyft")
 Rideshare.create(company: "Uber")
