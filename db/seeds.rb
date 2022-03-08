@@ -2,9 +2,10 @@ puts "🌱 Seeding spices..."
 
 #Restaurants
 20.times do
+    cuisine=["Indian", "French", "Hispanic", "Vegetarian/Vegan", "Italian", "American", "Winery"]
     Restaurant.create(
         restaurant_name: Faker::Restaurant.name, 
-        cuisine: Faker::Restaurant.type, 
+        cuisine: cuisine.sample, 
         description: Faker::Restaurant.description,
         address: Faker::Address.street_address,
         price: ["$", "$$", "$$$"].sample,
