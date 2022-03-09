@@ -8,7 +8,7 @@ class RestaurantsController < ApplicationController
 
 
     get'/restaurants/:cuisine' do
-        r=Restaurant.all.collect{|r| r.cuisine.cuisine_name }
+        r=Restaurant.where(cuisine: params[:cuisine])
         r.to_json
     end
 
