@@ -18,7 +18,7 @@ food_images=[
 
 ]
 
-cuisine=["Indian", "French", "Latin", "Vegetarian/Vegan", "Italian", "American", "Winery"]
+cuisine=["indian", "latin", "vegan", "communal", "wineries", "breweries", "comfort", "italian"]
 cuisine.each do |c|
     Cuisine.create(
         cuisine_name: c
@@ -31,6 +31,7 @@ end
         restaurant_name: Faker::Restaurant.name, 
         restaurant_image: food_images.sample,
         description: Faker::Restaurant.description,
+        cuisine_id: rand(1..Cuisine.all.length),
         address: Faker::Address.street_address,
         price: ["$", "$$", "$$$"].sample,
         avg_turn_time: rand(90...120)

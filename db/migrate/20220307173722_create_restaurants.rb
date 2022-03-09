@@ -6,6 +6,7 @@ class CreateRestaurants < ActiveRecord::Migration[6.1]
       t.string :price
       t.integer :avg_turn_time
       t.string :description
+      t.integer :cuisine_id
     end
   end
 end
