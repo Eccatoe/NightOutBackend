@@ -17,13 +17,19 @@ food_images=[
   "https://images.unsplash.com/photo-1466027575040-12134f1397fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8a2l0Y2hlbnxlbnwwfDJ8MHxibGFja3w%3D&auto=format&fit=crop&w=500&q=60"
 
 ]
+
+cuisine=["Indian", "French", "Latin", "Vegetarian/Vegan", "Italian", "American", "Winery"]
+cuisine.each do |c|
+    Cuisine.create(
+        cuisine_name: c
+    )
+end
+
 #Restaurants
 20.times do
-    cuisine=["Indian", "French", "Latin", "Vegetarian/Vegan", "Italian", "American", "Winery"]
     Restaurant.create(
         restaurant_name: Faker::Restaurant.name, 
         restaurant_image: food_images.sample,
-        cuisine: cuisine.sample, 
         description: Faker::Restaurant.description,
         address: Faker::Address.street_address,
         price: ["$", "$$", "$$$"].sample,
