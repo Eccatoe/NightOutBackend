@@ -18,20 +18,15 @@ food_images=[
 
 ]
 
-cuisine=["indian", "latin", "vegan", "communal", "wineries", "breweries", "comfort", "italian"]
-cuisine.each do |c|
-    Cuisine.create(
-        cuisine_name: c
-    )
-end
 
 #Restaurants
 20.times do
+    cuisine=["indian", "latin", "vegan", "communal", "wineries", "breweries", "comfort", "italian"]
     Restaurant.create(
         restaurant_name: Faker::Restaurant.name, 
         restaurant_image: food_images.sample,
         description: Faker::Restaurant.description,
-        cuisine_id: rand(1..Cuisine.all.length),
+        cuisine: cuisine.sample,
         address: Faker::Address.street_address,
         price: ["$", "$$", "$$$"].sample,
         avg_turn_time: rand(90...120)
