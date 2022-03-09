@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(version: 2022_03_09_003724) do
     t.string "address"
     t.string "price"
     t.integer "avg_turn_time"
-    t.string "description"
     t.string "cuisine"
+    t.string "description"
     t.string "restaurant_image"
   end
 

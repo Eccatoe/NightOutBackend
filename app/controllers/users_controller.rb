@@ -10,7 +10,7 @@ class UsersController < ApplicationController
         vet.to_json
     end
 
-    get '/user/:id/reservation/' do
+    get '/user/:id/reservations' do
         user = User.find(params[:id])
         reservations = user.reservations.map do |r|
             r
