@@ -1,3 +1,9 @@
+puts "Deleting seeds..."
+Reservation.destroy_all
+Restaurant.destroy_all
+User.destroy_all
+Rideshare.destroy_all
+
 puts "🌱 Seeding spices..."
 food_images=[
   "https://images.unsplash.com/photo-1549896443-e6d347606bf2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGFzdGF8ZW58MHwyfDB8YmxhY2t8&auto=format&fit=crop&w=500&q=60",
