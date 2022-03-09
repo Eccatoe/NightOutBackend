@@ -4,7 +4,13 @@ class UsersController < ApplicationController
         User.all.to_json
     end
 
-    get '/user/reservation/:id' do
+    get '/user/:id' do
+        user = User.find(params[:id])
+
+        vet.to_json
+    end
+
+    get '/user/:id/reservation/' do
         user = User.find(params[:id])
         reservations = user.reservations.map do |r|
             r
