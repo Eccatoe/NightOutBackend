@@ -1,5 +1,6 @@
 puts "Deleting seeds..."
 Reservation.destroy_all
+Review.destroy_all
 Restaurant.destroy_all
 User.destroy_all
 Rideshare.destroy_all
@@ -62,6 +63,16 @@ end
     user_id: rand(1..User.all.length),
     num_guests: rand(1..6))
  
+end
+
+#Reviews
+20.times do
+    Review.create(
+        restaurant_id: Restaurant.ids.sample,
+        user_id: User.ids.sample,
+        review: Faker::Restaurant.review,
+        stars: ['⭐️', '⭐️⭐️', '⭐️⭐️⭐️'].sample
+    )
 end
 
 

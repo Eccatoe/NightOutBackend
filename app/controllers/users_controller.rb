@@ -12,10 +12,22 @@ class UsersController < ApplicationController
 
     get '/user/:id/reservations' do
         user = User.find(params[:id])
+
         reservations = user.reservations.map do |r|
             r
         end
+
         reservations.to_json(include: :restaurant)
+    end
+
+    get '/user/:id/reviews' do
+        user = User.find(params[:id])
+
+        reviews = user.reviews.map do |r|
+            r
+        end
+
+        reviews.to_json(include: :restaurant)
     end
 
     post '/users/' do
