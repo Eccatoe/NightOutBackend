@@ -20,7 +20,6 @@ food_images=[
   "https://images.unsplash.com/photo-1619892480884-ab1110af20d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGRpc2h8ZW58MHwyfDB8YmxhY2t8&auto=format&fit=crop&w=500&q=60",
   "https://images.unsplash.com/photo-1497415818126-3740914d3300?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGxhdGV8ZW58MHwyfDB8YmxhY2t8&auto=format&fit=crop&w=500&q=60",
   "https://images.unsplash.com/photo-1606501129419-38058bd81ddc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHBsYXRlJTIwb2YlMjBmb29kfGVufDB8MnwwfGJsYWNrfA%3D%3D&auto=format&fit=crop&w=500&q=60",
-  "https://images.unsplash.com/photo-1582170090097-b251ddbbf7f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHBsYXRlJTIwb2YlMjBmb29kfGVufDB8MnwwfGJsYWNrfA%3D%3D&auto=format&fit=crop&w=500&q=60",
   "https://images.unsplash.com/photo-1466027575040-12134f1397fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8a2l0Y2hlbnxlbnwwfDJ8MHxibGFja3w%3D&auto=format&fit=crop&w=500&q=60"
 
 ]
