@@ -58,9 +58,9 @@ end
 20.times do
     Reservation.create(   
     details: Faker::Date.between(from: Date.today, to: 1.year.from_now),
-    restaurant_id: rand(1..Restaurant.all.length),
-    rideshare_id: rand(1..Rideshare.all.length),
-    user_id: rand(1..User.all.length),
+    restaurant_id: Restaurant.ids.sample,
+    rideshare_id: Rideshare.ids.sample,
+    user_id: User.ids.sample,
     num_guests: rand(1..6))
  
 end

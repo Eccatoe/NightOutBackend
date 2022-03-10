@@ -17,8 +17,14 @@ class RestaurantsController < ApplicationController
         restaurant.to_json
     end
 
-    # get '/restaurants/:price' do
-    #     r=Restaurant.all.select{|r| r.price=params[:price]}
-    # end
+    get '/restaurant/:id/reviews' do
+        restaurant = Restaurant.find(params[:id])
+
+        reviews = restaurant.reviews.map do |r|
+            r
+        end
+
+        reviews.to_json()
+    end
 
 end
