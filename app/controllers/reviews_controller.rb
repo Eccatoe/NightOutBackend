@@ -1,5 +1,10 @@
-class ReviewsController < Sinatra::Base
-    
+class ReviewsController < ApplicationController
+
+    get '/reviews' do
+        reviews = Review.all
+        reviews.to_json
+    end
+
     post '/review/:restaurant_id' do 
         review = Review.create(
             retaurant_id: params[:restaurant_id],
