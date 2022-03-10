@@ -27,7 +27,7 @@ food_images=[
 
 #Restaurants
 50.times do
-    cuisine=["indian", "latin", "vegan", "communal", "wineries", "breweries", "comfort", "italian"]
+    cuisine=["indian", "latin", "vegan", "communal", "wineries", "breweries", "comfort", "italian", "french"]
     Restaurant.create(
         restaurant_name: Faker::Restaurant.name, 
         restaurant_image: food_images.sample,
