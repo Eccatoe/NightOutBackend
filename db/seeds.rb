@@ -26,7 +26,7 @@ food_images=[
 
 
 #Restaurants
-20.times do
+50.times do
     cuisine=["indian", "latin", "vegan", "communal", "wineries", "breweries", "comfort", "italian"]
     Restaurant.create(
         restaurant_name: Faker::Restaurant.name, 
@@ -54,9 +54,10 @@ Rideshare.create(company: "Car Service")
 end
 
 #Reservations
-20.times do
+100.times do
     Reservation.create(   
-    details: Faker::Date.between(from: Date.today, to: 1.year.from_now),
+    day: Faker::Date.between(from: Date.today, to: 1.year.from_now),
+    time: Faker::Time.between(from: DateTime.now - 365, to: DateTime.now+365),
     restaurant_id: Restaurant.ids.sample,
     rideshare_id: Rideshare.ids.sample,
     user_id: User.ids.sample,
@@ -65,7 +66,7 @@ end
 end
 
 #Reviews
-20.times do
+100.times do
     Review.create(
         restaurant_id: Restaurant.ids.sample,
         user_id: User.ids.sample,

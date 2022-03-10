@@ -12,12 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2022_03_10_005105) do
 
-  create_table "cuisines", force: :cascade do |t|
-    t.string "cuisine_name"
-  end
-
   create_table "reservations", force: :cascade do |t|
-    t.datetime "details"
+    t.datetime "day"
+    t.datetime "time"
     t.integer "restaurant_id"
     t.integer "user_id"
     t.integer "rideshare_id"
@@ -32,8 +29,8 @@ ActiveRecord::Schema.define(version: 2022_03_10_005105) do
     t.string "address"
     t.string "price"
     t.integer "avg_turn_time"
-    t.string "cuisine"
     t.string "description"
+    t.string "cuisine"
     t.string "restaurant_image"
   end
 
