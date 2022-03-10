@@ -16,4 +16,5 @@ use ReservationsController
 use RestaurantsController
 use RidesharesController
 use UsersController
+use ReviewsController
 run ApplicationController

@@ -1,24 +1,19 @@
 class ReviewsController < ApplicationController
 
-    get '/reviews' do
-        reviews = Review.all
-        reviews.to_json
-    end
-
-    post '/review/:restaurant_id' do 
+    post '/reviews' do
         review = Review.create(
-            retaurant_id: params[:restaurant_id],
+            restaurant_id: params[:restaurant_id],
             user_id: params[:user_id],
             review: params[:review],
-            stars: params[:stars],
+            stars: params[:stars]
         )
 
         review.to_json
     end
 
-    patch '/review/:id' do
+    patch '/reviews/:id' do
         review = Review.find(params[:id])
-
+        
         attrs_to_update = params.select do |key, value|
             ["restaurant_id", "user_id", "review", "stars"].include?(key)
         end
@@ -28,7 +23,7 @@ class ReviewsController < ApplicationController
         review.to_json
     end
 
-    delete '/review/:id' do 
+    delete '/review/:id' do
         review = Review.find(params[:id])
 
         review.destroy
