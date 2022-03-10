@@ -24,7 +24,7 @@ class RestaurantsController < ApplicationController
             r
         end
 
-        reviews.to_json()
+        reviews.to_json(include: :user)
     end
 
 end
