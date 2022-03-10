@@ -56,8 +56,7 @@ end
 #Reservations
 100.times do
     Reservation.create(   
-    day: Faker::Date.between(from: Date.today, to: 1.year.from_now),
-    time: Faker::Time.between(from: DateTime.now - 365, to: DateTime.now+365),
+    details: Faker::Time.between(from: DateTime.now - 365, to: DateTime.now+365),
     restaurant_id: Restaurant.ids.sample,
     rideshare_id: Rideshare.ids.sample,
     user_id: User.ids.sample,
